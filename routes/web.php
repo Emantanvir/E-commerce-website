@@ -28,6 +28,10 @@ Route::get("/checkout", [OrderManager::class, 'showCheckout'])->name("checkout.s
 
 Route::post("/checkout", [OrderManager::class, 'CheckoutPost'])->name("checkout.post");
 
+Route::get("/payment/success", [OrderManager::class, 'paymentSuccess'])->name("payment.success");
+Route::get("/payment/error", [OrderManager::class, 'paymentError'])->name("payment.error");
+
+
 });
 
 
